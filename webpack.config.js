@@ -7,15 +7,15 @@ const sass = require('./webpack/sass');
 const css = require('./webpack/css');
 const extractCSS = require('./webpack/extractCSS.js');
 const images = require('./webpack/images');
-const fonts = require('./webpack/fonts')
- 
+const fonts = require('./webpack/fonts');
+
 const PATHS = {
     source: path.resolve(__dirname + '/src'),
-    build: path.resolve (__dirname + '/build')
+    build: path.resolve(__dirname + '/build')
 };
- 
+
 const common = merge([
-    {  
+    {
     resolve: {
         alias: {
           src: path.resolve(__dirname, 'src'),
@@ -23,20 +23,21 @@ const common = merge([
         }
       },
 
-    entry: PATHS.source + '/index.js',
+    entry: {
+        'index': PATHS.source + '/main.js',
+    },
 
     output: {
         path: PATHS.build,
         filename: 'js/[name].js'
     },
     plugins: [
-
         new HtmlWebpackPlugin({
-            filename: '/index.html',
-            template: PATHS.source + '/index.pug',
+            filename: 'index.html',
+            template: PATHS.source + '/main.pug',
         }),
     ],
-    }, 
+    },
     pug(),
     images(),
     fonts(),
@@ -58,22 +59,3 @@ module.exports = function(env) {
         ])
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
