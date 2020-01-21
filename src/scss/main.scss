@@ -9,6 +9,7 @@
     background-size: cover;
     background-position: 50%, 50%;
     position: relative;
+
     &::before {
         content: '';
         position: absolute;
@@ -16,6 +17,7 @@
         height: 100%;
         background-color: rgba(51, 51, 51, 0.85);
     }
+
     &__headline-wrapper {
         width: 100%;
         height: 100%;
@@ -23,22 +25,118 @@
         justify-content: flex-start;
         align-items: center;
     }
+
     &__headline {
         position: relative;
         font-family: $headline;
         font-weight: 400;
         text-transform: uppercase;
-        font-size: 6rem;
-        color: #FFDE5D;
+        font-size: 9rem;
+        color: $accent;
         opacity: 0.9;
         letter-spacing: 0.3em;
         margin-left: 20px;
+        line-height: 0.65;
     }
-}
 
-.headline {
     &__span {
         font-size: 1.2rem;
         letter-spacing: 1.5rem;
+    }
+}
+
+
+
+/* ------------about------------ */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 320px 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-height: 900px;
+    padding: 10px 0;
+    color: lighten(#ccc, 80%);
+
+    & .section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: $gray;
+
+
+        &:not(:first-child):before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(transparent, transparent 50%, #000);
+
+        &:hover {
+            &:not(:first-child):before {
+                cursor: pointer;
+                background-image: radial-gradient(transparent, #000);
+            }
+        }
+
+
+        & p, & h3 {
+            cursor: pointer;
+            text-align: center;
+            z-index: 1;
+        }
+    }
+
+    &__section1 {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    &__section2 {
+        grid-area: 1 / 3 / 3 / 6;
+        flex-direction: column;
+        background: url('../img/two-rhino-on-gray-field-631292.jpg') center/cover no-repeat;
+    }
+
+    &__section3 {
+        grid-area: 3 / 1 / 4 / 3;
+        background: url('../img/animals-antelope-close-up-deers-535431.jpg') center/cover no-repeat;
+    }
+
+    &__section4 {
+        grid-area: 3 / 3 / 4 / 5;
+        background: url('../img/2-lion-on-grass-field-during-daytime-41178.jpg') center/cover no-repeat;
+    }
+
+    &__section5 {
+        grid-area: 4 / 1 / 5 / 3;
+        background: url('../img/black-and-red-fox-standing-on-dirt-road-near-trees-1301172.jpg') center/cover no-repeat;
+    }
+
+    &__section6 {
+        grid-area: 5 / 2 / 6 / 4;
+        background: url('../img/two-birds-flying-53531.jpg') center/cover no-repeat;
+    }
+
+    &__section7 {
+        grid-area: 4 / 4 / 6 / 6;
+        background: url('../img/nature-water-playing-animals-63325.jpg') center/cover no-repeat;
+    }
+
+    &__section8 {
+        grid-area: 4 / 3 / 5 / 4;
+        background: url('../img/stripes-zebra-stripes-zebras-wild-34106.jpg') center/cover no-repeat;
+    }
+
+    &__section9 {
+        grid-area: 3 / 5 / 4 / 6;
+        background: url('../img/three-brown-bunnies-2830981.jpg') center/cover no-repeat;
+    }
+
+    &__section10 {
+        grid-area: 5 / 1 / 6 / 2;
+        background: url('../img/nature-water-animal-playing-68663.jpg') center/cover no-repeat;
     }
 }
