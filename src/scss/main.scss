@@ -52,10 +52,9 @@
 .about {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 320px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 160px 160px 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    max-height: 900px;
     padding: 10px 0;
     color: lighten(#ccc, 20%);
 
