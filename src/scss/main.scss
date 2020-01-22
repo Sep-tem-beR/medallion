@@ -57,7 +57,7 @@
     grid-row-gap: 10px;
     max-height: 900px;
     padding: 10px 0;
-    color: lighten(#ccc, 80%);
+    color: lighten(#ccc, 20%);
 
     & .section {
         position: relative;
@@ -68,17 +68,18 @@
         background-color: $gray;
 
 
-        &:not(:first-child):before {
+        &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
             content: '';
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: radial-gradient(transparent, transparent 50%, #000);
+            background-image: radial-gradient(closest-corner at 80% 50%, transparent, black);
+        }
 
         &:hover {
-            &:not(:first-child):before {
+            &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
                 cursor: pointer;
-                background-image: radial-gradient(transparent, #000);
+                background-image: radial-gradient(farthest-side at 20% 50%, transparent, black);
             }
         }
 
