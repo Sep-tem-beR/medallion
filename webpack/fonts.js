@@ -5,12 +5,12 @@ module.exports = function() {
                 {
                     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                     loader: 'file-loader',
-                    include: [/fonts/],
+                    include: [/webfonts/],
                     options: {
-                      publicPath: '../',
+                      publicPath: './',
                       name: 'fonts/[name].[ext]',
                     }
-                  }, 
+                  },
             ]
         }
     };
