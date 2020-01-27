@@ -1,0 +1,4 @@
+mixin owl-itm(options)
+    .owl-itm
+        img(src=require("./img/" + options.subFolder + "/" + options.imgName + '.jpg'), alt=options.description)
+        p= options.description
