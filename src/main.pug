@@ -573,19 +573,38 @@ html(lang="ru")
 
 
             section.contact
+                h2.contact__headline заинтересовались
+                    span ?
+                    br
+                    |можете
                 form.contact__form
+                    .contact__form-left-decoration
+                    .contact__form-right-decoration
+                    .contact__circle
+                    .contact__form-inner
+                        h3.contact__form-headline Написать мне
 
-                    <!-- Hidden Required Fields -->
-                    input(type="hidden" name="project_name" value="Madallion")
-                    input(type="hidden" name="admin_email" value="anna-kraft80@mail.ru")
-                    input(type="hidden" name="form_subject" value="Письмо с сайта 'Madallion'")
-                    <!-- END Hidden Required Fields -->
+                        <!-- Hidden Required Fields -->
+                        input(type="hidden" name="project_name" value="Madallion")
+                        input(type="hidden" name="admin_email" value="anna-kraft80@mail.ru")
+                        input(type="hidden" name="form_subject" value="Письмо с сайта 'Madallion'")
+                        <!-- END Hidden Required Fields -->
 
-                    input(type="text" name="Имя" placeholder="Ваше имя")
-                    input(type="text" name="Email" placeholder="Email")
-                    input(type="text" name="Телефон" placeholder="Телефон")
-                    input(type="textarea" name="Сообщение" placeholder="Ваше сообщение")
-                    button Отправить
+                        input(type="text" name="Имя" required placeholder="Ваше имя")
+                        input(type="text" name="Email" required placeholder="Email")
+                        input(type="text" name="Телефон" placeholder="Телефон")
+                        textarea(name="Сообщение" required placeholder="Сообщение...")
+                        input(type="submit" value="Отправить")
+
+
+
+            footer.footer
+                p.footer__logo medallion
+                p.footer__email anna-kraft80@mail.ru
+                p.footer__tel +7 920 217 16 96
+
+
+
 
 
 
