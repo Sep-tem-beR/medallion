@@ -1,5 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
- 
+
 module.exports = function(paths) {
     return {
         module: {
@@ -23,7 +23,7 @@ module.exports = function(paths) {
             ],
         },
         plugins: [
-            new ExtractTextPlugin('css/[name].css'),
+            new ExtractTextPlugin('[name].css'),
         ],
     };
 };
