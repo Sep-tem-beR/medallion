@@ -161,6 +161,7 @@
 
 .about-option {
 
+
     &__headeline {
         margin-bottom: 5px;
     }
@@ -207,7 +208,6 @@
         .about-option__content {
             background-color: lighten($accent, 20%);
             padding: 0 100px;
-            clip-path: inset(10% 10% 10% 10%);
             transition: all .7s ease;
         }
 
@@ -216,14 +216,13 @@
                 background-position: left;
             }
             & .about-option__content {
-                clip-path: inset(0 0 0 0);
                 background-color: $accent;
             }
         }
     }
 
     &__line1 {
-        margin-bottom: 100px;
+        margin: 100px 0;
 
         .about-option__content {
             flex-direction: column;
@@ -583,7 +582,6 @@
 
     &__headline {
         text-align: center;
-        // margin-bottom: 5px;
         font-size: $headlineSize;
         text-transform: uppercase;
         letter-spacing: 0.3em;
@@ -712,19 +710,79 @@ textarea::-webkit-input-placeholder {
 /* --------------------------footer--------------------------- */
 
 .footer {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
 
     &__logo {
+        margin-top: 40px;
+        font-size: 50px;
         font-family: $headlineFont;
-        text-align: center;
-        font-size: 3em;
         text-transform: uppercase;
-        letter-spacing: 0.8em;
+        font-weight: 400;
+        transform-style: preserve-3d;
+    }
+
+    &__wrapper {
+        display: inline-block;
+        animation: rotate 15s linear infinite;
+        text-shadow: -10px 7px 4px #ccc;
+    }
+
+    &__wrapper:nth-child(1) {
+        color: red;
+    }
+
+    &__wrapper:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    &__wrapper:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+    &__wrapper:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+    &__wrapper:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+    &__wrapper:nth-child(6) {
+        animation-delay: 0.5s;
+    }
+    &__wrapper:nth-child(7) {
+        animation-delay: 0.6s;
+    }
+    &__wrapper:nth-child(8) {
+        animation-delay: 0.7s;
+    }
+    &__wrapper:nth-child(9) {
+        animation-delay: 0.8s;
+    }
+
+    &__wrapper:not(:last-child) {
+        margin-right: 20px;
     }
 
     &__email,
     &__tel {
-        font-family: $headlineFont;
-        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(0deg);
+    }
+    24% {
+        transform: rotateX(0deg);
+    }
+    26% {
+        transform: rotateX(360deg);
+    }
+    74% {
+        transform: rotateX(360deg);
+    }
+    76% {
+        transform: rotateX(0deg);
     }
 }
