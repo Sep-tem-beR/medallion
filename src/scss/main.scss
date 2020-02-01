@@ -696,7 +696,25 @@ textarea::-webkit-input-placeholder {
 
     &__email,
     &__tel {
-        margin-top: 50px;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    &__email:before {
+        content: '\f2b6';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: -30px;
+        top: -3px;
+    }
+
+    &__tel:before {
+        content: '\f879';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: -30px;
     }
 }
 
