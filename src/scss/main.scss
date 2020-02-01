@@ -576,8 +576,10 @@
 
 .contact {
     width: 100%;
+    height: 100vh;
+    min-height: 750px;
     background: $accent url('../img/рога.png') top/cover no-repeat;
-    padding: 50px 0 200px;
+    padding: 50px 0;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
 
     &__headline {
@@ -586,17 +588,6 @@
         text-transform: uppercase;
         letter-spacing: 0.3em;
         font-family: $headlineFont;
-
-    }
-
-    & span {
-        font-size: 5rem;
-    }
-
-    &__form-headline {
-        font-size: 1.5em;
-        font-family: $headlineFont;
-        font-weight: 400;
     }
 
     &__form {
@@ -605,70 +596,7 @@
         margin: 0 auto;
         background-color: rgba(#ffffff, .9);
         border-radius: 30px;
-    }
-
-    &__form-left-decoration,
-    &__form-right-decoration {
-        position: absolute;
-        width: 50px;
-        height: 20px;
-        background: $accent;
-        border-radius: 20px;
-    }
-
-    &__form-left-decoration {
-        bottom: 60px;
-        left: -30px;
-    }
-
-    &__form-right-decoration {
-        top: 60px;
-        right: -30px;
-    }
-
-    &__form-left-decoration:before,
-    &__form-left-decoration:after,
-    &__form-right-decoration:before,
-    &__form-right-decoration:after {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 20px;
-        border-radius: 30px;
-        background: white;
-    }
-
-    &__form-left-decoration:before {
-        top: -20px;
-    }
-
-    &__form-left-decoration:after {
-        top: 20px;
-        left: 10px;
-    }
-
-    &__form-right-decoration:before {
-        top: -20px;
-        right: 0;
-    }
-
-    &__form-right-decoration:after {
-        top: 20px;
-        right: 10px;
-    }
-
-    &__circle {
-        position: absolute;
-        bottom: 80px;
-        left: -55px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: white;
-    }
-
-    &__form-inner {
-        padding: 5px 50px 50px;
+        padding: 50px;
     }
 
     & input,
@@ -685,11 +613,14 @@
         font-family: $mainFont;
     }
 
+    & input:last-child {
+        margin-bottom: 0;
+    }
+
     & input[type="submit"] {
         margin-top: 30px;
         background: #f69a73;
         border-bottom: 4px solid #d87d56;
-        // color: white;
     }
 
     & textarea {
