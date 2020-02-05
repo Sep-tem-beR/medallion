@@ -61,100 +61,106 @@
 
 /* ------------about------------ */
 
-.about {
+// .about {
 
-    &__grid-wrapper {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 160px 160px 1fr 1fr 1fr;
-        grid-column-gap: 3px;
-        grid-row-gap: 3px;
-        padding: 10px 0;
-        color: lighten(#ccc, 20%);
-    }
+//     &__grid-wrapper {
+//         display: grid;
+//         grid-template-columns: repeat(5, 1fr);
+//         grid-template-rows: 160px 160px 1fr 1fr 1fr;
+//         // grid-column-gap: 3px;
+//         // grid-row-gap: 3px;
+//         // padding: 10px 0;
+//         color: lighten(#ccc, 20%);
+//     }
 
-    & .section {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        background-color: $gray;
-
-
-        &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(closest-corner at 80% 50%, transparent, black);
-        }
-
-        &:hover {
-            &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
-                cursor: pointer;
-                background-image: radial-gradient(farthest-side at 20% 50%, transparent, black);
-            }
-        }
+//     & .section:not(:first-child) {
+//         position: relative;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         padding: 20px;
+//         background-color: $gray;
 
 
-        & p, & h3 {
-            cursor: pointer;
-            text-align: center;
-            z-index: 1;
-        }
-    }
+//         &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
+//             content: '';
+//             position: absolute;
+//             width: 100%;
+//             height: 100%;
+//             background-image: radial-gradient(closest-corner at 80% 50%, transparent, black);
+//         }
 
-    &__section1 {
-        grid-area: 1 / 1 / 3 / 3;
-    }
+//         &:hover {
+//             &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
+//                 cursor: pointer;
+//                 background-image: radial-gradient(farthest-side at 20% 50%, transparent, black);
+//             }
+//         }
 
-    &__section2 {
-        grid-area: 1 / 3 / 3 / 6;
-        flex-direction: column;
-        background: url('../img/two-rhino-on-gray-field-631292.jpg') center/cover no-repeat;
-    }
 
-    &__section3 {
-        grid-area: 3 / 1 / 4 / 3;
-        background: url('../img/animals-antelope-close-up-deers-535431.jpg') center/cover no-repeat;
-    }
+//         & p, & h3 {
+//             cursor: pointer;
+//             text-align: center;
+//             z-index: 1;
+//         }
+//     }
 
-    &__section4 {
-        grid-area: 3 / 3 / 4 / 5;
-        background: url('../img/2-lion-on-grass-field-during-daytime-41178.jpg') center/cover no-repeat;
-    }
+//     &__section1 {
+//         grid-area: 1 / 1 / 3 / 3;
 
-    &__section5 {
-        grid-area: 4 / 1 / 5 / 3;
-        background: url('../img/black-and-red-fox-standing-on-dirt-road-near-trees-1301172.jpg') center/cover no-repeat;
-    }
+//         & img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//         }
+//     }
 
-    &__section6 {
-        grid-area: 5 / 2 / 6 / 4;
-        background: url('../img/two-birds-flying-53531.jpg') center/cover no-repeat;
-    }
+//     &__section2 {
+//         grid-area: 1 / 3 / 3 / 6;
+//         flex-direction: column;
+//         background: url('../img/two-rhino-on-gray-field-631292.jpg') center/cover no-repeat;
+//     }
 
-    &__section7 {
-        grid-area: 4 / 4 / 6 / 6;
-        background: url('../img/nature-water-playing-animals-63325.jpg') center/cover no-repeat;
-    }
+//     &__section3 {
+//         grid-area: 3 / 1 / 4 / 3;
+//         background: url('../img/animals-antelope-close-up-deers-535431.jpg') center/cover no-repeat;
+//     }
 
-    &__section8 {
-        grid-area: 4 / 3 / 5 / 4;
-        background: url('../img/stripes-zebra-stripes-zebras-wild-34106.jpg') center/cover no-repeat;
-    }
+//     &__section4 {
+//         grid-area: 3 / 3 / 4 / 6;
+//         background: url('../img/brown-yak-on-green-and-brown-grass-field-144234.jpg') center/cover no-repeat;
+//     }
 
-    &__section9 {
-        grid-area: 3 / 5 / 4 / 6;
-        background: url('../img/three-brown-bunnies-2830981.jpg') center/cover no-repeat;
-    }
+//     &__section5 {
+//         grid-area: 4 / 1 / 5 / 3;
+//         background: url('../img/black-and-red-fox-standing-on-dirt-road-near-trees-1301172.jpg') center/cover no-repeat;
+//     }
 
-    &__section10 {
-        grid-area: 5 / 1 / 6 / 2;
-        background: url('../img/nature-water-animal-playing-68663.jpg') center/cover no-repeat;
-    }
-}
+//     &__section6 {
+//         grid-area: 5 / 2 / 6 / 4;
+//         background: url('../img/two-birds-flying-53531.jpg') center/cover no-repeat;
+//     }
+
+//     &__section7 {
+//         grid-area: 4 / 4 / 6 / 6;
+//         background: url('../img/nature-water-playing-animals-63325.jpg') center/cover no-repeat;
+//     }
+
+//     &__section8 {
+//         grid-area: 4 / 3 / 5 / 4;
+//         background: url('../img/stripes-zebra-stripes-zebras-wild-34106.jpg') center/cover no-repeat;
+//     }
+
+//     // &__section9 {
+//     //     grid-area: 3 / 5 / 4 / 6;
+//     //     background: url('../img/three-brown-bunnies-2830981.jpg') center/cover no-repeat;
+//     // }
+
+//     &__section10 {
+//         grid-area: 5 / 1 / 6 / 2;
+//         background: url('../img/nature-water-animal-playing-68663.jpg') center/cover no-repeat;
+//     }
+// }
 
 
 /* --------------------.about-option---------------- */
@@ -172,11 +178,10 @@
         transition: all 0.5s ease;
     }
 
-
     & img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     &__line {
@@ -202,7 +207,7 @@
     &__line:not(:first-child) {
         .about-option__img {
             background-position: center;
-            transition: all 3s ease;
+            transition: all 3s linear;
         }
 
         .about-option__content {
@@ -222,7 +227,6 @@
     }
 
     &__line1 {
-        margin: 100px 0;
 
         .about-option__content {
             flex-direction: column;
@@ -233,15 +237,14 @@
         }
 
         &:hover {
-            & .about-option__content {
+            .about-option__content {
                 clip-path: polygon(11% 0, 100% 0%, 100% 100%, 11% 100%, 11% 75%, 0 75%, 11% 54%);
                 padding: 0 40px 0 160px;
                 background-color: $accent;
             }
-            & .line {
+            .line {
                 width: 80px;
             }
-
         }
     }
 
@@ -260,7 +263,7 @@
 
     &__line4 {
         .about-option__img {
-            background: url('../img/2-lion-on-grass-field-during-daytime-41178.jpg') center/cover no-repeat;
+            background: url('../img/brown-yak-on-green-and-brown-grass-field-144234.jpg') center/cover no-repeat;
         }
     }
 
