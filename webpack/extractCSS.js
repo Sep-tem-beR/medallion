@@ -1,29 +1,25 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = function(paths) {
     return {
         module: {
             rules: [
                 {
-                    test: /\.scss$/,
-                    include: paths,
-                    use: ExtractTextPlugin.extract({
-                        fallback: 'style-loader',
-                        use: ['css-loader','sass-loader'],
-                    }),
-                },
-                {
-                    test: /\.css$/,
-                    include: paths,
-                    use: ExtractTextPlugin.extract({
-                        fallback: 'style-loader',
-                        use: 'css-loader',
-                    }),
+                    test: /\.(sa|sc|c)ss$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                        },
+                        'css-loader',
+                        'sass-loader',
+                    ],
                 },
             ],
         },
         plugins: [
-            new ExtractTextPlugin('[name].css'),
-        ],
-    };
+            new MiniCssExtractPlugin({
+              filename: '[name].css',
+            }),
+          ],
+    }
 };
