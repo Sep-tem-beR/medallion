@@ -58,224 +58,68 @@
 }
 
 
-
-/* ------------about------------ */
-
-// .about {
-
-//     &__grid-wrapper {
-//         display: grid;
-//         grid-template-columns: repeat(5, 1fr);
-//         grid-template-rows: 160px 160px 1fr 1fr 1fr;
-//         // grid-column-gap: 3px;
-//         // grid-row-gap: 3px;
-//         // padding: 10px 0;
-//         color: lighten(#ccc, 20%);
-//     }
-
-//     & .section:not(:first-child) {
-//         position: relative;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         padding: 20px;
-//         background-color: $gray;
-
-
-//         &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
-//             content: '';
-//             position: absolute;
-//             width: 100%;
-//             height: 100%;
-//             background-image: radial-gradient(closest-corner at 80% 50%, transparent, black);
-//         }
-
-//         &:hover {
-//             &:not(:first-child):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):before {
-//                 cursor: pointer;
-//                 background-image: radial-gradient(farthest-side at 20% 50%, transparent, black);
-//             }
-//         }
-
-
-//         & p, & h3 {
-//             cursor: pointer;
-//             text-align: center;
-//             z-index: 1;
-//         }
-//     }
-
-//     &__section1 {
-//         grid-area: 1 / 1 / 3 / 3;
-
-//         & img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//         }
-//     }
-
-//     &__section2 {
-//         grid-area: 1 / 3 / 3 / 6;
-//         flex-direction: column;
-//         background: url('../img/two-rhino-on-gray-field-631292.jpg') center/cover no-repeat;
-//     }
-
-//     &__section3 {
-//         grid-area: 3 / 1 / 4 / 3;
-//         background: url('../img/animals-antelope-close-up-deers-535431.jpg') center/cover no-repeat;
-//     }
-
-//     &__section4 {
-//         grid-area: 3 / 3 / 4 / 6;
-//         background: url('../img/brown-yak-on-green-and-brown-grass-field-144234.jpg') center/cover no-repeat;
-//     }
-
-//     &__section5 {
-//         grid-area: 4 / 1 / 5 / 3;
-//         background: url('../img/black-and-red-fox-standing-on-dirt-road-near-trees-1301172.jpg') center/cover no-repeat;
-//     }
-
-//     &__section6 {
-//         grid-area: 5 / 2 / 6 / 4;
-//         background: url('../img/two-birds-flying-53531.jpg') center/cover no-repeat;
-//     }
-
-//     &__section7 {
-//         grid-area: 4 / 4 / 6 / 6;
-//         background: url('../img/nature-water-playing-animals-63325.jpg') center/cover no-repeat;
-//     }
-
-//     &__section8 {
-//         grid-area: 4 / 3 / 5 / 4;
-//         background: url('../img/stripes-zebra-stripes-zebras-wild-34106.jpg') center/cover no-repeat;
-//     }
-
-//     // &__section9 {
-//     //     grid-area: 3 / 5 / 4 / 6;
-//     //     background: url('../img/three-brown-bunnies-2830981.jpg') center/cover no-repeat;
-//     // }
-
-//     &__section10 {
-//         grid-area: 5 / 1 / 6 / 2;
-//         background: url('../img/nature-water-animal-playing-68663.jpg') center/cover no-repeat;
-//     }
-// }
-
-
 /* --------------------.about-option---------------- */
 
 .about-option {
+    position: relative;
+    font-family: $handWriting;
+    font-weight: 700;
 
-
-    &__headeline {
-        margin-bottom: 5px;
-    }
-
-    & .line {
-        width: 0px;
-        border-bottom: 1px solid red;
-        transition: all 0.5s ease;
-    }
-
-    & img {
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        background: rgba($color: #000000, $alpha: 0.2);
+        z-index: 1;
     }
 
-    &__line {
-        width: 100%;
-        height:300px;
-        display: flex;
-        cursor: pointer;
+    &__headeline {
+        color: black;
     }
 
-    &__img {
-        min-width: 400px;
+    &__text {
+        position: absolute;
+        left: 30px;
+        top: 50px;
+
+    }
+
+    &__text1 {
+        width: 200px;
+        height: 340px;
+        background: url('../img/text1.png') center/cover no-repeat;
+        margin-bottom: 10px;
+    }
+
+    &__text2 {
+        width: 200px;
+        height: 340px;
+        background: url('../img/text2.png') center/cover no-repeat;
+    }
+
+    &__knife {
+        width: 100px;
+        height: 400px;
+        background: url('../img/knife.png') center/cover no-repeat;
+        position: absolute;
+        bottom: 50px;
+        right: 30px;
     }
 
     &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 60%;
+        margin: 0 auto;
         text-align: center;
-        flex-grow: 1;
-        padding: 0 100px;
-    }
+        padding: 40px;
+        position: relative;
 
-    &__line:not(:first-child) {
-        .about-option__img {
-            background-position: center;
-            transition: all 3s linear;
-        }
-
-        .about-option__content {
-            background-color: lighten($accent, 20%);
-            padding: 0 100px;
-            transition: all .7s ease;
-        }
-
-        &:hover {
-            & .about-option__img {
-                background-position: left;
-            }
-            & .about-option__content {
-                background-color: $accent;
-            }
-        }
-    }
-
-    &__line1 {
-
-        .about-option__content {
-            flex-direction: column;
-            background-color: lighten($accent, 20%);
-            padding: 0 100px;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0% 100%, 0 75%, 0% 0%);
-            transition: all .5s ease;
-        }
-
-        &:hover {
-            .about-option__content {
-                clip-path: polygon(11% 0, 100% 0%, 100% 100%, 11% 100%, 11% 75%, 0 75%, 11% 54%);
-                padding: 0 40px 0 160px;
-                background-color: $accent;
-            }
-            .line {
-                width: 80px;
-            }
-        }
-    }
-
-    &__line2 {
-        .about-option__img {
-            background: url('../img/nature-water-playing-animals-63325.jpg') center/cover no-repeat;
-            transition: all .5s ease;
-        }
-    }
-
-    &__line3 {
-        .about-option__img {
-            background: url('../img/animals-antelope-close-up-deers-535431.jpg') right/cover no-repeat;
-        }
-    }
-
-    &__line4 {
-        .about-option__img {
-            background: url('../img/brown-yak-on-green-and-brown-grass-field-144234.jpg') center/cover no-repeat;
-        }
-    }
-
-    &__line5 {
-        .about-option__img {
-            background: url('../img/black-and-red-fox-standing-on-dirt-road-near-trees-1301172.jpg') center/cover no-repeat;
-        }
-    }
-
-    &__line6 {
-        .about-option__img {
-            background: url('../img/two-birds-flying-53531.jpg') center/cover no-repeat;
+        & p {
+            padding: 20px;
+            margin: 0 ;
+            font-size: 1.5em;
         }
     }
 }
@@ -316,23 +160,23 @@
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-weight: bold;
     }
 }
 
 /* ---------------------owl-carousel---------------- */
 
 .owl-carousel {
-    width: 70vw;
+    width: 100%;
     max-height: 700px;
 }
 
 .owl-carousel .owl-stage-outer {
     width: 100%;
-    height: 90%;
+    height: 85%;
 }
 
 .owl-carousel .owl-item img {
+    width: 100%;
     height: 90%;
     object-fit: contain;
 }
@@ -357,6 +201,10 @@
     outline: none;
 }
 
+.owl-theme .owl-nav {
+    position: relative;
+}
+
 .owl-theme .owl-nav [class*='owl-']:hover {
     background: initial;
     color: darken($gray, 20%);
@@ -367,11 +215,11 @@
 }
 
 .owl-carousel .owl-nav button.owl-prev {
-    left: -100px;
+    left: 100px;
 }
 
 .owl-carousel .owl-nav button.owl-next {
-    right: -100px;
+    right: 100px;
 }
 
 
@@ -379,7 +227,6 @@
 /* ------------------trophy-medallions------------------- */
 
 .trophy-medallions {
-    margin-top: 100px;
     padding-top: 80px;
     background-image: linear-gradient($accent, white);
 
@@ -418,7 +265,6 @@
 
 
 .thread-and-taxidermy {
-    margin-top: 100px;
     padding-top: 80px;
     background-image: linear-gradient($accent, white);
 
@@ -458,7 +304,6 @@
 
 
 .carved-home-decoration {
-    margin-top: 100px;
     padding-top: 80px;
     background-image: linear-gradient($accent, white);
 
@@ -498,7 +343,6 @@
 
 
 .carving-and-natural-materials {
-    margin-top: 100px;
     padding-top: 80px;
     background-image: linear-gradient($accent, white);
 
@@ -539,7 +383,6 @@
 
 
 .fixtures {
-    margin-top: 100px;
     padding-top: 80px;
     background-image: linear-gradient($accent, white);
 
@@ -608,7 +451,6 @@
         padding: 0 20px;
         margin-bottom: 10px;
         background: #C7BFDD;
-        color: #fff;
         line-height: 40px;
         border-width: 0;
         border-radius: 20px;
@@ -737,3 +579,5 @@ textarea::-webkit-input-placeholder {
         transform: rotateX(0deg);
     }
 }
+
+@import "_@media.scss";
