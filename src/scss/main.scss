@@ -55,6 +55,45 @@
         font-size: 1.2rem;
         letter-spacing: 1.5rem;
     }
+
+    .burger {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+    }
+
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        background-color: $accent;
+        border-radius: 0;
+        height: 3px;
+    }
+}
+
+
+/* --------------------mmenu---------------- */
+
+.mm-listitem:after {
+    border-color: $accent;
+}
+
+.mm-listitem:last-of-type:after {
+    border-color: transparent;
+}
+
+.mm-menu_listview-justify .mm-panels>.mm-panel .mm-listitem__text {
+    color: white;
+}
+
+.mm-navbar__title>span {
+    color: $accent;
+}
+
+.mm-wrapper_opened {
+    overflow-y: scroll;
+}
+
+.mm-panels {
+    right: -18px;
 }
 
 

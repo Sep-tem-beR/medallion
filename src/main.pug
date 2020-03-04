@@ -14,17 +14,41 @@ html(lang="ru")
         <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap" rel="stylesheet">
         title Madallion
     body
-        .page
+        .page(id="my-page")
             .header
+                nav(id="my-menu")
+                    ul
+                        li
+                            a(href="#about") Обо мне
+                        li
+                            a(href="#madallions") Медальоны
+                        li
+                            a(href="#trophy-medallions") Медальоны с трофеями
+                        li
+                            a(href="#thread-and-taxidermy") Сочетание резьбы и таксидермии
+                        li
+                            a(href="#carved-home-decoration") Резные предметы интерьера
+                        li
+                            a(href="#carving-and-natural-materials") Сочетание резьбы и природных материалов
+                        li
+                            a(href="#fixtures") Светильники
+                        li
+                            a(href="#contact") Написать мне
+
+
                 .header__headline-wrapper
                     h1.header__headline
                         span.header__span таксидермическая студия
                         br
                         | medallion
+                    .burger
+                        a.hamburger.hamburger--emphatic(href='#my-menu')
+                            span.hamburger-box
+                                span.hamburger-inner
 
 
 
-            section.about-option
+            section.about-option#about
                 .about-option__text
                     .about-option__text1
                     .about-option__text2
@@ -41,7 +65,7 @@ html(lang="ru")
 
 
 
-            section.section.madallions
+            section.section.madallions#madallions
                 h2.madallions__headline медальоны
                 .line
                 .madallions__owl-wrapper.owl-wrapper
@@ -238,7 +262,7 @@ html(lang="ru")
                         })
 
 
-            section.section.trophy-medallions
+            section.section.trophy-medallions#trophy-medallions
                 h2.trophy-medallions__headline Медальоны с трофеями
                 .line
                 .trophy-medallions__owl-wrapper.owl-wrapper
@@ -350,7 +374,7 @@ html(lang="ru")
                         })
 
 
-            section.section.thread-and-taxidermy
+            section.section.thread-and-taxidermy#thread-and-taxidermy
                 h2.thread-and-taxidermy__headline Сочетание резьбы
                                                   br
                                                   |и таксидермии
@@ -404,7 +428,7 @@ html(lang="ru")
                         })
 
 
-            section.section.carved-home-decoration
+            section.section.carved-home-decoration#carved-home-decoration
                 h2.carved-home-decoration__headline Резные предметы интерьера
                 .line
                 .carved-home-decoration__owl-wrapper.owl-wrapper
@@ -465,7 +489,7 @@ html(lang="ru")
                             description: 'Тарелка самовар',
                         })
 
-            section.section.carving-and-natural-materials
+            section.section.carving-and-natural-materials#carving-and-natural-materials
                 h2.carving-and-natural-materials__headline Сочетание резьбы
                                                            br
                                                            |и природных материалов
@@ -510,7 +534,7 @@ html(lang="ru")
 
 
 
-            section.section.fixtures
+            section.section.fixtures#fixtures
                 h2.fixtures__headline Светильники
                 .line
                 .fixtures__owl-wrapper.owl-wrapper
@@ -542,7 +566,7 @@ html(lang="ru")
                         })
 
 
-            section.contact
+            section.contact#contact
                 h2.contact__headline Написать мне
                 form.contact__form
 

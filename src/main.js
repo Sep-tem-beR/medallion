@@ -3,6 +3,26 @@ import './owl/owl.theme.default.css'
 import './js/owl.carousel'
 import './js/all.js'
 import './scss/main.scss'
+import './js/mmenu.js'
+
+document.addEventListener(
+	"DOMContentLoaded", () => {
+		new Mmenu( "#my-menu", {
+			"extensions": [
+				"theme-black",
+				"pagedim-black",
+				"border-fill",
+				"position-right",
+				"fx-menu-slide",
+				"listview-justify",
+			],
+			"pageScroll": true,
+			"setSelected": {
+				"hover": true
+			},
+		});
+	}
+);
 
 
 $( document ).ready(function() {
@@ -19,7 +39,7 @@ $( document ).ready(function() {
         animateIn: 'fadeIn',
         nav: true,
         navText: ['<i class="fas fa-angle-left"></i>','<i class="fas fa-angle-right"></i>']
-    });
+	});
 
    	//E-mail Ajax Send
 	$(".contact__form").submit(function() { //Change
